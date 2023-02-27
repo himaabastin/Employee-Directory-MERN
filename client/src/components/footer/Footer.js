@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
+import "./footer.css";
 
-import './footer.css';
+//Footer
 
 function Footer() {
   return (
     <footer className="footer">
-    
       <div className="copy-right">
         <p>&copy; 2023 Employee Directory. All rights reserved.</p>
       </div>

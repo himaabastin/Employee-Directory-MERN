@@ -5,11 +5,12 @@
     padding: 20px;
     background:#013554;
   }
-  .header h1{
+  .header .logo-title {
     color: #d3d7dc;
     background:#013554;
+    text-decoration: none !important;
   }
- 
+  
   
  
   

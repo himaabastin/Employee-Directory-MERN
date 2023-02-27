@@ -22,9 +22,6 @@ mongoose.connect(URI, (err) => {
   console.log("Connected to Database");
 });
 
-app.get("/", (req, res) => {
-  res.json({ msg: "Welcome" });
-});
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {

@@ -10,15 +10,20 @@ ul {
 /* Utilities */
 .card::after,
 .card img {
-  border-radius: 50%;
+  border-radius: 10%;
 }
-
+.home-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 .card,
 .stats {
   display: flex;
 }
 
 .card {
+  max-width: calc(50% - 2rem); /* subtracting the margin from the max-width */
   padding: 2.5rem 2rem;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, .5);
@@ -28,6 +33,7 @@ ul {
   position: relative;
   transform-style: preserve-3d;
   overflow: hidden;
+  margin: 1rem 2rem 1rem 2rem; 
 }
 .card::before,
 .card::after {
@@ -53,7 +59,8 @@ ul {
 }
 
 .card img {
-  width: 8rem;
+  width: 15rem;
+ 
   min-width: 80px;
   box-shadow: 0 0 0 5px #FFF;
 }
@@ -64,6 +71,19 @@ ul {
 
 .name {
   margin-bottom: 1rem;
+ 
+}
+.Emp_name{
+  text-decoration: none;
+  font-size:1.5rem ;
+  font-weight:525;
+  color: #2b2929;
+  cursor: pointer;
+}
+.Emp_name:hover{
+  
+  color: #195a92;
+  transition: 0.5s;
 }
 .name h2 {
   font-size: 1.3rem;
@@ -76,6 +96,7 @@ ul {
 .text {
   font-size: .9rem;
   margin-bottom: 1rem;
+  font-weight: 100;
 }
 
 .stats {
@@ -86,6 +107,7 @@ ul {
 }
 .stats li h3 {
   font-size: .99rem;
+  font-weight: 500;
 }
 .stats li h4 {
   font-size: .75rem;
