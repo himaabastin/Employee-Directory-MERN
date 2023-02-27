@@ -29,7 +29,7 @@ const controller = {
   getAllEmployee:async(req,res)=>{
     try {
         const allEmployees=await Employees.find()
-        res.json({allEmployees})
+        res.json(allEmployees)
     } catch (error) {
         return res.status(500).json({ msg: err.message });   
     }

@@ -2,7 +2,7 @@ const router=require("express").Router()
 const controller=require("../controllers/controller")
 
 
-router.route("/emloyeeProfiles")
+router.route("/employeeProfiles")
 .get(controller.getAllEmployee)
 .post(controller.addProfile)
 
