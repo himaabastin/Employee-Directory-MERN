@@ -34,15 +34,6 @@ const controller = {
         return res.status(500).json({ msg: err.message });   
     }
   },
-  //Single Detail view of Employee
-  singleEmployee:async(req,res)=>{
-    try {
-        const Employee=await Employees.findOne({employeeId:req.params.id})
-        res.json(Employee)
-    } catch (err) {
-        return res.status(500).json({ msg: err.message });   
-    }
-  
-  }
+ 
 };
 module.exports = controller;

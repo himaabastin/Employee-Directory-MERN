@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+
+
 import "./Home.css";
+import { employeeProfiles } from "../../../axios/services/HomeService";
 
 //Home Page
 
@@ -10,9 +12,9 @@ function Home() {
   useEffect(() => {
     const fetchEmployees = async () => {
       try {
-        const employees = await axios.get("/employeeProfiles");
-        console.log(employees.data);
-        setAllEmployee(employees.data);
+        const employees = await employeeProfiles() ;
+        console.log(employees);
+        setAllEmployee(employees);
       } catch (err) {
         console.log(err);
       }

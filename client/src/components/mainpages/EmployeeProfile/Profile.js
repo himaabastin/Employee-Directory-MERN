@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import axios from "axios";
+
 import "./Profile.css";
+import { employeeProfiles } from "../../../axios/services/HomeService";
 
 //Employee Profile
 
@@ -12,8 +13,9 @@ function Profile() {
   useEffect(() => {
     const fetchEmployees = async () => {
       try {
-        const employees = await axios.get("/employeeProfiles");
-        const selectedEmployee = employees.data.find(
+        const employees = await employeeProfiles()
+        console.log(employees)
+        const selectedEmployee = employees.find(
           (emp) => emp.employeeId === params.id
         );
         if (selectedEmployee) {

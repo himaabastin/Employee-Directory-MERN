@@ -7,6 +7,5 @@ router.route("/employeeProfiles")
 .get(controller.getAllEmployee)
 .post(controller.addProfile)
 
-router.route("/employee/:id")
-.get(controller.singleEmployee)
+
 module.exports=router
